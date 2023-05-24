@@ -1,0 +1,502 @@
+/* Google Font CDN - Noto Sans, Noto Sans KR */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --font-color: #666;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+/* Navgation Bar */
+.top-nav {
+  z-index: 99;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.074);
+}
+nav .logo {
+  width: 200px;
+}
+.gnb {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+}
+.gnb a {
+  height: 100%;
+  line-height: 65px;
+  padding: 0 15px;
+  transition: 0.2s;
+}
+
+.gnb .dropdown a {
+  display: block;
+  height: 100%;
+  line-height: 65px;
+  padding: 0 15px;
+  transition: 0.3s;
+}
+
+.gnb a:hover {
+  background-color: #f9fafe;
+  color: black;
+}
+.gnb > a:first-child {
+  border-bottom: 2px solid #1966d2;
+}
+.gnb a:nth-child(3) {
+  position: relative;
+  padding-right: 30px;
+}
+.gnb a:last-child {
+  position: relative;
+  padding-right: 30px;
+}
+.gnb a:nth-child(3)::after,
+.gnb a:last-child::after {
+  content: "\e942";
+  font-family: xeicon;
+  position: absolute;
+  font-size: 13px;
+  left: 47px;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown_ul {
+  position: absolute;
+  width: 190px;
+  top: 38px;
+  left: 0px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  padding: 20px;
+  padding-right: 0;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.074);
+  display: none;
+}
+.dropdown li {
+  list-style: none;
+  font-size: 15px;
+  display: block;
+  width: 90%;
+  padding: 15px 10px;
+  color: var(--font-color);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.dropdown li:last-child {
+  margin-bottom: 0;
+}
+.dropdown li:hover {
+  background-color: #f9fafe;
+  color: black;
+}
+.support::after {
+  display: block;
+  position: absolute;
+  content: "\e909";
+  font-family: xeicon;
+  font-size: 18px;
+  transform: rotate(45deg);
+  left: 60px;
+  top: 90px;
+  transition: 0.3s;
+}
+.support:hover::after {
+  transform: translate(3px, -3px) rotate(45deg);
+}
+
+/* Container */
+.container {
+  margin-top: 200px;
+  width: 1150px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  float: auto;
+}
+
+/* Main */
+.main_backgroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 125vh;
+  width: 100%;
+  background: rgb(137, 206, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(137, 206, 255, 0.5340730042016807) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  z-index: -1;
+}
+.main {
+  height: 100vh;
+  text-align: center;
+}
+.main_desc img {
+  width: 80px;
+}
+.main_desc h1 {
+  margin: 30px 0;
+  margin-top: 10px;
+  font-size: 55px;
+  font-weight: 400;
+  color: #222;
+}
+.btn_download {
+  display: inline-block;
+  border-radius: 25px;
+  padding: 10px 25px;
+  color: white;
+  background-color: #1a6cde;
+}
+.btn_top {
+  position: absolute;
+  right: -200px;
+  top: 10px;
+  transition: 0.4s;
+}
+.active {
+  transform: translateX(-210px);
+}
+.main_desc p {
+  color: #666;
+  font-size: 13px;
+  font-weight: 300;
+  margin: 5px 0;
+}
+.main_desc h2 {
+  color: #1a6cde;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 30px 0;
+}
+.main_desc h2::after {
+  display: inline-block;
+  content: "\e909";
+  margin-left: 5px;
+  font-family: xeicon;
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.main_desc h2:hover::after {
+  transform: rotate(90deg) translateY(-5px);
+}
+.main_desc span {
+  display: block;
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+.main_desc span em {
+  color: #1a6cde;
+  cursor: pointer;
+  font-style: normal;
+}
+.main > img {
+  width: 850px;
+}
+
+/* Sections */
+section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 80px 0;
+}
+section img {
+  width: 620px;
+}
+section:nth-child(2) > img {
+  object-fit: cover;
+  object-position: left;
+}
+
+section .desc {
+  margin-top: 60px;
+}
+section .desc h3 {
+  font-weight: 300;
+}
+section .desc h1 {
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 28px;
+}
+section .desc span {
+  display: inline-block;
+  line-height: 1.8em;
+  margin: 10px 0;
+  font-weight: 300;
+}
+section .desc h2 {
+  color: #1a6cde;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+section .desc h2::after {
+  display: inline-block;
+  content: "\e909";
+  margin-left: 5px;
+  font-family: xeicon;
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+
+section .desc h2:hover::after {
+  transform: rotate(90deg) translateY(-5px);
+}
+
+/* Function_More */
+.function_more {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.function_more h3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.function_more h1 {
+  font-weight: 400;
+  font-size: 45px;
+}
+/* Cards */
+.cards {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.card {
+  position: relative;
+  width: 230px;
+  height: 350px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: left;
+  padding: 20px;
+  background-color: white;
+  transition: 0.3s;
+  z-index: 100;
+}
+.card-desc {
+  z-index: 90;
+}
+.card-desc img {
+  width: 45px;
+}
+.card-desc h1 {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 15px 0;
+}
+.card-desc span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #666;
+}
+.card-desc h2 {
+  position: absolute;
+  bottom: -40px;
+  color: #1a6cde;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 70px 0;
+  cursor: pointer;
+}
+.card-desc h2::after {
+  display: inline-block;
+  content: "\e909";
+  margin-left: 5px;
+  font-family: xeicon;
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.card-desc h2:hover::after {
+  transform: translateX(5px) rotate(90deg);
+}
+
+.card:hover.card {
+  transform: translateY(-5px);
+}
+
+/* Chrome-download Section */
+.chrome-download {
+  height: 80vh;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #1a6cde;
+  display: flex;
+  overflow: hidden;
+}
+.chrome-download .desc {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.chrome-download .desc h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.chrome-download .desc .btn_download {
+  background-color: white;
+  color: #1a6cde;
+}
+.chrome-download .images {
+  width: 55%;
+  position: relative;
+}
+.chrome-download .images .labtop1 {
+  width: 1000px;
+  position: absolute;
+  top: 0;
+  right: -500px;
+  transform: rotate(-45deg);
+  filter: drop-shadow(-20px 20px 0 #00000029);
+}
+.chrome-download .images .labtop2 {
+  width: 1000px;
+  position: absolute;
+  bottom: -550px;
+  left: -40px;
+  transform: rotate(45deg);
+  filter: drop-shadow(15px 15px 0 #00000029);
+}
+.chrome-download .images .phone {
+  position: absolute;
+  top: 10px;
+  left: 140px;
+  transform: rotate(45deg);
+  width: 250px;
+  filter: drop-shadow(15px 15px 0 #00000029);
+}
+
+/* SNS LIST */
+
+.sns-list {
+  border-bottom: 1px solid #ddd;
+  padding: 30px;
+  padding-right: 0;
+}
+.sns-list span {
+  display: inline-block;
+  color: var(--font-color);
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.sns-list i {
+  margin-right: 25px;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+/* Sitemaps */
+.sitemap {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.link-items {
+  display: flex;
+  justify-content: space-between;
+}
+.link-item {
+  display: flex;
+  flex-direction: column;
+}
+.link-item-title {
+  margin-bottom: 15px;
+}
+.link-item-content a {
+  display: block;
+  margin-bottom: 15px;
+}
+.add-anchor {
+  position: relative;
+}
+.add-anchor::after {
+  display: block;
+  position: absolute;
+  content: "\e909";
+  font-family: xeicon;
+  font-size: 18px;
+  transform: rotate(45deg);
+  right: -25px;
+  top: 4px;
+  transition: 0.3s;
+}
+.add-anchor:hover::after {
+  transform: translate(3px, -3px) rotate(45deg);
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.copyright_logo {
+  float: left;
+}
+.copyrights {
+  float: right;
+  margin-top: 20px;
+}
+.copyrights a {
+  margin-left: 15px;
+}
+
+.copyright a::before {
+  content: "|";
+  margin-right: 10px;
+  color: #ddd;
+  font-size: 14px;
+}
+.copyright a:first-child::before {
+  display: none;
+}

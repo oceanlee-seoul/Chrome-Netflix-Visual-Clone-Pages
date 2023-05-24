@@ -1,0 +1,110 @@
+/* Responsive CSS */
+@media (max-width: 768px) {
+  /* Top GNV Hide */
+  .gnb {
+    display: none;
+  }
+  .container {
+    width: 450px;
+  }
+  /* Main */
+  .main {
+    height: 100%;
+    margin-bottom: 90px;
+  }
+  .main_desc h1 {
+    font-size: 30px;
+  }
+  .main_desc span {
+    padding: 0px 20px;
+  }
+  .main > img {
+    width: 400px;
+  }
+  .main_backgroud {
+    height: 100vh;
+  }
+  /* Sections */
+  section {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  section img {
+    width: 450px;
+  }
+  section:nth-child(2n-1) {
+    flex-direction: column-reverse;
+  }
+
+  /* Cards */
+  .function_more h1 {
+    font-size: 30px;
+  }
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* Chrome-download */
+  .chrome-download {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chrome-download .desc h1 {
+    font-size: 28px;
+    margin-top: 70px;
+  }
+  .chrome-download .images .labtop2 {
+    display: none;
+  }
+  .chrome-download .images .phone {
+    left: -200px;
+    top: 100px;
+  }
+  .chrome-download .images .labtop1 {
+    top: 400px;
+  }
+
+  /* sitemap Accordian change */
+  .sitemap {
+    border-bottom: none;
+  }
+  .link-items {
+    display: flex;
+    flex-direction: column;
+  }
+  .link-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+  }
+  .link-item-title {
+    pointer-events: all;
+  }
+  .link-item-title:after {
+    content: "\e942";
+    font-family: "xeicon";
+    float: right;
+    transition: 0.3s;
+  }
+  .link-item-title.active-anchor:after {
+    transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .link-item-content {
+    display: none;
+  }
+  .add-anchor::after {
+    right: 180px;
+  }
+
+  /* Footer - Copyright */
+  .copyright_logo img {
+    width: 3-px;
+  }
+  .copyright a {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,102 @@
+/* Responsive CSS */
+@media (max-width: 768px) {
+  /* Header */
+  header img {
+    width: 120px;
+    top: 20px;
+    left: 35px;
+  }
+  /* Main */
+  .main {
+    height: 500px;
+  }
+  .main-overlay {
+  }
+  .main-container {
+    left: 20px;
+    width: 370px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .desc {
+    width: 100%;
+  }
+  .main-container .desc h1 {
+    font-size: 45px;
+  }
+  .main-container .desc h4 {
+    font-size: 18px;
+  }
+  .main-container .desc p {
+    font-size: 16px;
+  }
+  .main-container form input[type="text"] {
+    width: 370px;
+  }
+  .main-container form button {
+    transform: scale(0.8);
+    margin-top: 10px;
+    margin-left: -14px;
+  }
+  /* Sections */
+  section {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  section .texts h1 {
+    font-size: 40px;
+    margin-top: 0px;
+  }
+  section .texts p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  section img {
+    width: 100%;
+  }
+  section:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+  /* Questions */
+  .questions > h1 {
+    font-size: 30px;
+  }
+  .questions-title {
+    font-size: 16px;
+    height: 70px;
+    padding-top: 23px;
+  }
+  .questions-title i {
+    font-size: 35px;
+  }
+  .questions-content {
+    font-size: 16px;
+  }
+  .questions-form form input[type="text"] {
+    width: 450px;
+  }
+  .questions-form form button {
+    transform: scale(0.8);
+    margin-top: 10px;
+    margin-left: -14px;
+  }
+  /* Sitemaps */
+  .sitemap {
+    margin-top: 50px;
+  }
+  .sitemaps {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .sitemaps a {
+    margin-bottom: 10px;
+  }
+  /* Footer */
+  footer {
+    margin-top: 20px;
+  }
+}

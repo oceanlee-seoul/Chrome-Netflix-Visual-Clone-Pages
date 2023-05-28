@@ -12,6 +12,7 @@
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
   </head>
   <body>
     <header>
@@ -197,28 +198,31 @@
         </div>
         <div class="sitemap">
           <span>질문이 있으신가요? 문의 전화: <i>080-001-9587</i></span>
-          <div class="sitemaps">
-            <a href="#none">자주 묻는 질문</a>
-            <a href="#none">고객 센터</a>
-            <a href="#none">계정</a>
-            <a href="#none">미디어 센터</a>
-          </div>
-          <div class="sitemaps">
-            <a href="#none">투자 정보(IR)</a>
-            <a href="#none">입사 정보</a>
-            <a href="#none">넷플릭스 지원 디바이스</a>
-            <a href="#none">이용 약관</a>
-          </div>
-          <div class="sitemaps">
-            <a href="#none">개인정보 처리방침</a>
-            <a href="#none">쿠키 설정</a>
-            <a href="#none">회사 정보</a>
-            <a href="#none">문의하기</a>
-          </div>
-          <div class="sitemaps">
-            <a href="#none">속도 테스트</a>
-            <a href="#none">법적 고지</a>
-            <a href="#none">오직 넷플릭스에서</a>
+          <div class="sitemaps_list">
+            <div class="sitemaps">
+              <a href="#none">자주 묻는 질문</a>
+              <a href="#none">고객 센터</a>
+              <a href="#none">계정</a>
+              <a href="#none">미디어 센터</a>
+            </div>
+            <div class="sitemaps">
+              <a href="#none">투자 정보(IR)</a>
+              <a href="#none">입사 정보</a>
+              <a href="#none">넷플릭스 지원 디바이스</a>
+              <a href="#none">이용 약관</a>
+            </div>
+            <div class="sitemaps">
+              <a href="#none">개인정보 처리방침</a>
+              <a href="#none">쿠키 설정</a>
+              <a href="#none">회사 정보</a>
+              <a href="#none">문의하기</a>
+            </div>
+            <div class="sitemaps">
+              <a href="#none">속도 테스트</a>
+              <a href="#none">법적 고지</a>
+              <a href="#none">오직 넷플릭스에서</a>
+              <a href="#none">오직 넷플릭스에서</a>
+            </div>
           </div>
         </div>
         <footer>
@@ -238,7 +242,29 @@
         </footer>
       </div>
     </div>
-
+    <div class="login-modal-page">
+      <div class="modal-form">
+        <div class="inner">
+          <h1>로그인</h1>
+          <input type="email" placeholder="이메일 또는 전화번호" />
+          <input type="password" placeholder="비밀번호" />
+          <button>로그인</button>
+          <div class="inner-other">
+            <input type="checkbox" name="login-save" />
+            <label for="login-save">로그인 정보 저장</label>
+            <p>도움이 필요하신가요?</p>
+          </div>
+          <div class="inner-texts">
+            <p>Netflix 회원이 아닌가요? <i>지금 가입하세요.</i></p>
+            <span
+              >이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을
+              확인합니다. <i>자세히 알아보기.</i></span
+            >
+          </div>
+        </div>
+        <i class="xi-close"></i>
+      </div>
+    </div>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
@@ -259,6 +285,16 @@
             .next()
             .removeClass("active");
         }
+      });
+
+      // modal page show
+      $(".btn_login").click(function () {
+        $(".login-modal-page").fadeIn();
+        $("body").addClass("active");
+      });
+      $(".xi-close").click(function () {
+        $(".login-modal-page").fadeOut();
+        $("body").removeClass("active");
       });
     </script>
   </body>
